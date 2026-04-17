@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI SUPER POWER - Tăng X300% Hiệu Suất</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-red': '#E50914',
+                        'brand-yellow': '#FFD700',
+                        'brand-dark': '#111111',
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 2s infinite',
+                        'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .text-shadow { text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .text-shadow-glow { text-shadow: 0 0 10px rgba(255, 215, 0, 0.8); }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased pb-20 md:pb-0">
+
+    <!-- FLOATING MOBILE CTA -->
+    <div class="fixed bottom-0 left-0 w-full bg-brand-red p-3 z-50 md:hidden flex justify-center shadow-[0_-5px_15px_rgba(0,0,0,0.3)]">
+        <a href="#register-section" class="w-full text-center bg-brand-yellow text-black font-extrabold py-3 px-4 rounded-lg text-lg animate-pulse-fast border-b-4 border-yellow-600 active:border-b-0 active:mt-1">
+            <i class="fas fa-bolt mr-2"></i> NHẬN VÉ MIỄN PHÍ NGAY!
+        </a>
+    </div>
+
+    <!-- PHẦN 1: HERO SECTION -->
+    <header class="bg-brand-dark text-white pt-10 pb-16 px-4 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <div class="inline-block bg-brand-red text-white px-4 py-1 rounded-full font-bold text-sm mb-6 border border-white animate-pulse">
+                <i class="fas fa-exclamation-triangle mr-2"></i> CẢNH BÁO: CHỈ DÀNH CHO NHỮNG AI MUỐN ĐỔI ĐỜI
+            </div>
+            
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-black leading-tight mb-6 uppercase">
+                <span class="text-white text-shadow">ĐỪNG ĐỂ TRÍ TUỆ NHÂN TẠO</span><br>
+                <span class="text-brand-red text-shadow">CƯỚP MẤT BÁT CƠM CỦA BẠN!</span><br>
+                <span class="text-brand-yellow text-shadow-glow mt-2 block">KHÁM PHÁ QUYỀN NĂNG "AI SUPER POWER"</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl font-semibold mb-8 text-gray-300">
+                VŨ KHÍ TỐI THƯỢNG ĐỂ LÀM CHỦ AI, TĂNG X300% HIỆU SUẤT VÀ THỔI BAY MỌI ĐỐI THỦ NGÁNG ĐƯỜNG!
+            </p>
+
+            <div class="bg-black/50 p-6 rounded-xl border border-gray-700 inline-block max-w-2xl mx-auto mb-10 shadow-2xl">
+                <p class="line-through text-gray-400 text-lg">Giá niêm yết: 1.868.000đ</p>
+                <p class="text-3xl md:text-4xl font-black text-green-400 my-2">CƠ HỘI ĐIÊN RỒ HÔM NAY</p>
+                <p class="text-2xl md:text-3xl font-bold text-white uppercase bg-brand-red inline-block px-4 py-1 mt-2 transform -rotate-2">NHẬN VÉ MIỄN PHÍ 100%!</p>
+            </div>
+
+            <!-- COUNTDOWN -->
+            <div class="mb-10">
+                <p class="text-brand-yellow font-bold mb-3 uppercase tracking-wider">Ưu đãi đóng cửa vĩnh viễn sau:</p>
+                <div class="flex justify-center gap-4 text-center" id="countdown">
+                    <div class="bg-gray-800 rounded p-3 w-20 border border-gray-600">
+                        <span class="text-3xl font-black text-white block" id="hours">00</span>
+                        <span class="text-xs text-gray-400 uppercase">Giờ</span>
+                    </div>
+                    <div class="text-3xl font-black text-brand-red self-center">:</div>
+                    <div class="bg-gray-800 rounded p-3 w-20 border border-gray-600">
+                        <span class="text-3xl font-black text-white block" id="minutes">14</span>
+                        <span class="text-xs text-gray-400 uppercase">Phút</span>
+                    </div>
+                    <div class="text-3xl font-black text-brand-red self-center">:</div>
+                    <div class="bg-gray-800 rounded p-3 w-20 border border-gray-600">
+                        <span class="text-3xl font-black text-white block" id="seconds">59</span>
+                        <span class="text-xs text-gray-400 uppercase">Giây</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#register-section" class="inline-block bg-brand-yellow text-black font-extrabold text-xl md:text-2xl py-4 px-10 rounded-full shadow-[0_0_20px_rgba(255,215,0,0.5)] hover:shadow-[0_0_30px_rgba(255,215,0,0.8)] transition-all transform hover:scale-105 animate-pulse-fast">
+                GIỮ CHỖ MIỄN PHÍ CỦA TÔI NGAY LẬP TỨC <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- PHẦN 2: NỖI ĐAU -->
+    <section class="py-16 bg-gray-100 px-4 border-b-8 border-brand-red">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-black text-center text-brand-dark mb-10 uppercase">
+                Tỉnh mộng đi! Bạn đang làm <span class="text-brand-red">nô lệ</span> cho chính công việc của mình!
+            </h2>
+            <p class="text-center text-lg font-semibold mb-8">Có phải bạn đang ngày đêm cày cuốc đến kiệt sức, mắt thâm quầng, đầu óc căng như dây đàn nhưng thu nhập thì vẫn lẹt đẹt, hèn mọn?</p>
+            
+            <div class="space-y-6">
+                <div class="flex items-start bg-white p-5 rounded-lg shadow-md border-l-4 border-red-600">
+                    <i class="fas fa-times-circle text-red-600 text-3xl mt-1 mr-4"></i>
+                    <p class="text-lg">Bạn làm kinh doanh nhưng mọi thứ đang ế ẩm tột độ, một mình bạn phải ôm đồm cày cuốc từ A-Z, từ rặn từng chữ tìm khách, đến đóng gói hàng hóa.</p>
+                </div>
+                <div class="flex items-start bg-white p-5 rounded-lg shadow-md border-l-4 border-red-600">
+                    <i class="fas fa-times-circle text-red-600 text-3xl mt-1 mr-4"></i>
+                    <p class="text-lg">Khối lượng công việc khổng lồ đang dìm chết bạn mỗi ngày. Bạn luôn cảm thấy nghẹt thở, mệt mỏi cùng cực, không còn lấy một giây phút bình yên cho gia đình.</p>
+                </div>
+                <div class="flex items-start bg-white p-5 rounded-lg shadow-md border-l-4 border-red-600">
+                    <i class="fas fa-times-circle text-red-600 text-3xl mt-1 mr-4"></i>
+                    <p class="text-lg">Bạn hoang mang, tự ti đến tột độ vì thấy mình ngày càng "cũ kỹ", trì trệ. Trong khi thế giới công nghệ ngoài kia lột xác từng giây, bạn vẫn trung thành với cách làm thủ công của thập niên trước.</p>
+                </div>
+                <div class="flex items-start bg-white p-5 rounded-lg shadow-md border-l-4 border-red-600">
+                    <i class="fas fa-times-circle text-red-600 text-3xl mt-1 mr-4"></i>
+                    <p class="text-lg">Khao khát bứt phá, muốn kinh doanh đa nguồn thu nhập nhưng lại túi rỗng, không vốn liếng, không quan hệ.</p>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-black text-white p-8 rounded-xl text-center shadow-2xl border border-gray-800">
+                <h3 class="text-2xl font-bold text-brand-yellow mb-4 uppercase">Nhìn quanh đi!</h3>
+                <p class="text-lg leading-relaxed">
+                    Trong lúc bạn đang vò đầu bứt tai, vắt óc hàng giờ đồng hồ chỉ để viết ra vài dòng content nhạt nhẽo, chật vật ngồi chỉnh từng cái slide quê mùa, thì <strong class="text-brand-red">đối thủ của bạn đã dùng AI để tự động hóa toàn bộ cơ đồ của chúng!</strong> Chúng đang nhởn nhơ uống cà phê và cuỗm sạch khách hàng của bạn! Nếu không thay đổi, bạn chắc chắn sẽ trở thành <strong class="text-brand-red underline">KẺ BỊ ĐÀO THẢI NHỤC NHÃ NHẤT</strong> trong kỷ nguyên khốc liệt này!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHẦN 3 & 5: GIẢI PHÁP & LỢI ÍCH -->
+    <section class="py-16 bg-white px-4">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-black text-center text-brand-dark mb-6 uppercase">
+                Đừng tuyệt vọng! Chìa khóa vàng đang ở đây:
+            </h2>
+            <h3 class="text-2xl md:text-3xl font-black text-center text-brand-red mb-12 uppercase bg-red-100 p-4 rounded-lg inline-block mx-auto w-full">
+                CHƯƠNG TRÌNH ĐÀO TẠO "AI PLUS - AI SUPER POWER"!
+            </h3>
+            
+            <p class="text-center text-xl mb-12 max-w-3xl mx-auto text-gray-700">
+                Đây tuyệt đối không phải là một mớ lý thuyết sáo rỗng. Đây là chương trình <strong>HUẤN LUYỆN THỰC CHIẾN 6 BUỔI TỐI ONLINE QUA ZOOM</strong>, một cỗ máy biến đổi con người thực thụ! Không cần bạn phải giỏi công nghệ, không cần máy tính cấu hình khủng, không cần biết một dòng code nào, <strong>CHỈ CẦN BẠN CÓ MẶT.</strong>
+            </p>
+
+            <h4 class="text-2xl font-black text-center mb-8">Chỉ sau 6 buổi tối, bạn sẽ TÓM GỌN vũ khí siêu hạng này:</h4>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Benefit 1 -->
+                <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center">
+                    <div class="w-16 h-16 bg-brand-red text-white rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h5 class="font-bold text-xl mb-3">Video Sát Thủ Triệu View</h5>
+                    <p class="text-gray-600">Sản xuất video trên Facebook Reels, TikTok & YouTube Shorts chỉ trong 5 PHÚT! Không cần vác mặt lên hình.</p>
+                </div>
+                <!-- Benefit 2 -->
+                <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center">
+                    <div class="w-16 h-16 bg-brand-red text-white rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h5 class="font-bold text-xl mb-3">Binh Đoàn Trợ Lý Ảo AI</h5>
+                    <p class="text-gray-600">Giao phó mọi thứ, làm việc như trâu ngựa 24/7. Giải phóng ngay lập tức 70% sức lao động trần tục của bạn.</p>
+                </div>
+                <!-- Benefit 3 -->
+                <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center">
+                    <div class="w-16 h-16 bg-brand-red text-white rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                    <h5 class="font-bold text-xl mb-3">Content Thôi Miên Khách Hàng</h5>
+                    <p class="text-gray-600">Ép khách hàng phải khao khát rút ví với tỷ lệ chốt đơn X2, X3 lần nhờ bộ não content ma thuật của AI.</p>
+                </div>
+                <!-- Benefit 4 -->
+                <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center">
+                    <div class="w-16 h-16 bg-brand-red text-white rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h5 class="font-bold text-xl mb-3">Thiết Kế Đẳng Cấp Chớp Nhoáng</h5>
+                    <p class="text-gray-600">Làm ảnh bán hàng, slide thuyết trình, CV, proposal xịn sò đẳng cấp chỉ bằng vài cú click chuột.</p>
+                </div>
+                <!-- Benefit 5 -->
+                <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center">
+                    <div class="w-16 h-16 bg-brand-red text-white rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h5 class="font-bold text-xl mb-3">100 Ý Tưởng Siêu Bão/15 Phút</h5>
+                    <p class="text-gray-600">Xóa sổ vĩnh viễn khái niệm "bí ý tưởng" ra khỏi đầu bạn. Luôn đi trước đối thủ một bước dài.</p>
+                </div>
+                <!-- Benefit 6 -->
+                <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center">
+                    <div class="w-16 h-16 bg-brand-red text-white rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h5 class="font-bold text-xl mb-3">Tiết Kiệm 3-5 Giờ/Ngày</h5>
+                    <p class="text-gray-600">Thoát khỏi lao động khổ sai. Thời gian đó để bạn đếm tiền, đi du lịch, tận hưởng cuộc sống vương giả!</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#register-section" class="inline-block bg-brand-red text-white font-extrabold text-xl py-4 px-10 rounded-full shadow-[0_5px_15px_rgba(229,9,20,0.5)] hover:bg-red-700 transition-all transform hover:-translate-y-1">
+                    TÔI MUỐN SỞ HỮU QUYỀN NĂNG NÀY!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHẦN 4: CHUYÊN GIA -->
+    <section class="py-16 bg-brand-dark text-white px-4 border-t-4 border-brand-yellow">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/3 text-center relative">
+                <div class="w-64 h-64 mx-auto bg-gray-700 rounded-full border-4 border-brand-yellow flex items-center justify-center overflow-hidden relative shadow-[0_0_30px_rgba(255,215,0,0.3)]">
+                    <!-- Placeholder Image -->
+                    <div class="text-center p-4">
+                        <i class="fas fa-user-tie text-6xl text-gray-500 mb-2"></i>
+                        <p class="text-sm text-gray-400">[Ảnh Chuyên Gia<br>Nguyễn Tất Kiểm]</p>
+                    </div>
+                </div>
+                <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-brand-red text-white font-bold py-1 px-4 rounded shadow-lg whitespace-nowrap">
+                    CHUYÊN GIA DẪN ĐƯỜNG
+                </div>
+            </div>
+            <div class="md:w-2/3">
+                <h2 class="text-3xl md:text-4xl font-black mb-2 text-brand-yellow uppercase">Tại sao bạn PHẢI ngoan ngoãn lắng nghe tôi?</h2>
+                <h3 class="text-2xl font-bold mb-6">Tôi là NGUYỄN TẤT KIỂM - Kẻ đang đứng trên đỉnh cao của cuộc chơi "AI First" tại VN!</h3>
+                
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-400 text-xl mt-1 mr-3"></i>
+                        <p class="text-lg"><strong>16 NĂM</strong> lăn lộn sống chết với Marketing Online, 10 năm ròng rã xây dựng hệ thống kinh doanh tạo ra hàng triệu đô la.</p>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-400 text-xl mt-1 mr-3"></i>
+                        <p class="text-lg">Đã trực tiếp cầm tay chỉ việc, huấn luyện cho hơn <strong>320.000 học viên</strong>, càn quét trên <strong>350+ sân khấu</strong> lớn nhỏ.</p>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-400 text-xl mt-1 mr-3"></i>
+                        <p class="text-lg">Đã đào tạo trực tiếp hơn <strong>50.000+</strong> con người làm chủ sức mạnh AI, tổ chức sự kiện đào tạo AI lớn nhất lịch sử Việt Nam với hơn 2000 người tham dự!</p>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-400 text-xl mt-1 mr-3"></i>
+                        <p class="text-lg">Tác giả của hàng loạt cuốn sách gối đầu giường làm rung chuyển thị trường: <em>Xây dựng hệ thống kinh doanh đột phá, TikTok - Giải mã ma trận vạn đơn...</em></p>
+                    </li>
+                </ul>
+                <div class="mt-6 p-4 bg-gray-800 border-l-4 border-brand-red italic text-gray-300">
+                    "Tôi đã nhấc bổng hàng chục ngàn người thoát khỏi vũng lầy bế tắc, nghèo đói, và BẠN BẮT BUỘC PHẢI LÀ NGƯỜI TIẾP THEO!"
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHẦN 6: NỘI DUNG KHÓA HỌC -->
+    <section class="py-16 bg-gray-50 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-black text-center text-brand-dark mb-10 uppercase">
+                KHUI HỘP NỘI DUNG <span class="text-brand-red">TÀN KHỐC</span> CỦA KHÓA HỌC
+            </h2>
+            <p class="text-center text-lg mb-8 font-semibold">5 Module sức mạnh tột đỉnh tiêm thẳng vào đầu bạn mà không nơi nào có:</p>
+
+            <div class="space-y-6">
+                <!-- Mod 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-brand-red hover:shadow-xl transition-all">
+                    <h3 class="text-xl font-black text-brand-red mb-2 uppercase flex items-center">
+                        <span class="bg-brand-red text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 text-lg">01</span>
+                        TĂNG TỐC 300% HIỆU SUẤT - ĐẠP ĐỔ MỌI GIỚI HẠN
+                    </h3>
+                    <p class="text-gray-700 ml-11">Tự động hóa triệt để việc viết lách, email, CSKH, nghiên cứu thị trường. Giảm 70% thời gian làm thủ công vô bổ, tập trung vào việc hốt bạc.</p>
+                </div>
+                <!-- Mod 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-brand-red hover:shadow-xl transition-all">
+                    <h3 class="text-xl font-black text-brand-red mb-2 uppercase flex items-center">
+                        <span class="bg-brand-red text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 text-lg">02</span>
+                        XÂY KHO KIẾN THỨC BÁN ĐỨT CHO THIÊN HẠ
+                    </h3>
+                    <p class="text-gray-700 ml-11">Hiểu tận gốc rễ cách AI vận hành. Biến kiến thức AI thành khóa học, dịch vụ tư vấn hái ra tiền. Trở thành Chuyên gia AI được săn đón điên cuồng!</p>
+                </div>
+                <!-- Mod 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-brand-red hover:shadow-xl transition-all">
+                    <h3 class="text-xl font-black text-brand-red mb-2 uppercase flex items-center">
+                        <span class="bg-brand-red text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 text-lg">03</span>
+                        CỖ MÁY IN TIỀN TỰ ĐỘNG VỚI AFFILIATE
+                    </h3>
+                    <p class="text-gray-700 ml-11">Dùng AI tạo content bão táp, kéo traffic vô tận, tự động hóa affiliate. Nằm ngủ cũng có tiền từ blog, TikTok, YouTube. Tối đa hóa ROI đến mức chóng mặt!</p>
+                </div>
+                <!-- Mod 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-brand-red hover:shadow-xl transition-all">
+                    <h3 class="text-xl font-black text-brand-red mb-2 uppercase flex items-center">
+                        <span class="bg-brand-red text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 text-lg">04</span>
+                        HỆ THỐNG KINH DOANH AI BẤT BẠI
+                    </h3>
+                    <p class="text-gray-700 ml-11">Tạo trợ lý AI chốt đơn không trượt phát nào, xử lý 90% công việc rác rưởi lặp đi lặp lại. Giảm sạch áp lực, thu nhập tăng vọt.</p>
+                </div>
+                <!-- Mod 5 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-brand-red hover:shadow-xl transition-all">
+                    <h3 class="text-xl font-black text-brand-red mb-2 uppercase flex items-center">
+                        <span class="bg-brand-red text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 text-lg">05</span>
+                        THỐNG TRỊ TRAFFIC - BÙNG NỔ TRIỆU LƯỢT TIẾP CẬN
+                    </h3>
+                    <p class="text-gray-700 ml-11">Kéo hàng triệu lượt truy cập từ Google, mạng xã hội, tạo viral content ầm ầm mà không tốn lấy một đồng quảng cáo ngu ngốc.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHẦN 7: BẰNG CHỨNG XÃ HỘI -->
+    <section class="py-16 bg-gray-900 text-white px-4">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-black text-center text-brand-yellow mb-4 uppercase text-shadow">
+                SỰ THẬT ĐANH THÉP KHÔNG THỂ CHỐI CÃI!
+            </h2>
+            <p class="text-center text-gray-300 mb-10 text-lg">Hàng ngàn người đang âm thầm dùng AI cào tiền của thiên hạ mỗi ngày. Còn bạn thì sao? Vẫn thảm hại ngồi đó hoài nghi?</p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-gray-800 p-6 rounded-xl relative border border-gray-700">
+                    <i class="fas fa-quote-left text-4xl text-brand-red opacity-50 absolute top-4 left-4"></i>
+                    <p class="text-lg italic mb-4 relative z-10 pt-6 px-4">"Trời ơi, kênh của tôi đã tăng trưởng bạo chúa 150% người xem chỉ nhờ ứng dụng AI từ khóa học này. Tôi như được tái sinh!"</p>
+                    <div class="flex items-center gap-4 border-t border-gray-700 pt-4">
+                        <div class="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center"><i class="fas fa-user"></i></div>
+                        <div>
+                            <p class="font-bold text-brand-yellow">Nguyễn Thanh Hằng</p>
+                            <p class="text-sm text-gray-400">Content Creator</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 p-6 rounded-xl relative border border-gray-700">
+                    <i class="fas fa-quote-left text-4xl text-brand-red opacity-50 absolute top-4 left-4"></i>
+                    <p class="text-lg italic mb-4 relative z-10 pt-6 px-4">"Khóa học quá điên rồ! Tôi từ một kẻ mù công nghệ nay không còn sợ viết content hay làm slide nữa. Mọi thứ xong trong một cái chớp mắt!"</p>
+                    <div class="flex items-center gap-4 border-t border-gray-700 pt-4">
+                        <div class="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center"><i class="fas fa-user"></i></div>
+                        <div>
+                            <p class="font-bold text-brand-yellow">Trần Quang Dũng</p>
+                            <p class="text-sm text-gray-400">Chủ Doanh Nghiệp Nhỏ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHẦN 8, 9, 10, 11: OFFER, SCARCITY, GUARANTEE, CTA -->
+    <section id="register-section" class="py-20 bg-brand-red px-4 relative overflow-hidden">
+        <!-- Background Effects -->
+        <div class="absolute inset-0 bg-black opacity-10 pattern-diagonal-lines"></div>
+        
+        <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl p-8 md:p-12 relative z-10 border-4 border-brand-yellow">
+            <h2 class="text-3xl md:text-5xl font-black text-center text-brand-dark mb-4 uppercase">
+                LỜI CHÀO HÀNG ĐẪM MÁU KHÔNG THỂ CHỐI TỪ!
+            </h2>
+            
+            <div class="text-center mb-8">
+                <p class="text-xl text-gray-600 mb-2">Giá trị thực tế + 20 Quà tặng độc quyền:</p>
+                <p class="text-4xl md:text-5xl font-black text-gray-400 line-through">1.868.000 VNĐ</p>
+                <div class="my-4">
+                    <span class="bg-green-600 text-white font-black text-4xl md:text-6xl px-6 py-2 rounded shadow-lg inline-block transform -rotate-2">
+                        MIỄN PHÍ 100%
+                    </span>
+                </div>
+            </div>
+
+            <div class="bg-red-100 border-l-8 border-brand-red p-6 mb-8 rounded">
+                <h3 class="text-2xl font-black text-brand-red uppercase mb-2 flex items-center animate-pulse">
+                    <i class="fas fa-siren-on mr-2"></i> BÁO ĐỘNG ĐỎ! KHAN HIẾM TỘT ĐỘ!
+                </h3>
+                <p class="text-lg font-bold text-gray-800">
+                    MIỄN PHÍ nhưng tuyệt đối KHÔNG dành cho kẻ chậm chạp! Tôi CHỈ CẤP VÉ CHO ĐÚNG <span class="text-brand-red text-2xl">20 NGƯỜI ĐẦU TIÊN</span> ĐĂNG KÝ TRONG HÔM NAY! Đồng hồ tử thần đang đếm ngược. Nếu chậm chân, bạn sẽ phải xì ra 1.868.000đ hoặc vĩnh viễn bị đá ra khỏi cuộc chơi!
+                </p>
+            </div>
+
+            <!-- THE FORM / CTA -->
+            <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 mb-8 text-center">
+                <form id="registerForm" class="space-y-4 text-left relative">
+                    <!-- Loading overlay -->
+                    <div id="loadingOverlay" class="hidden absolute inset-0 bg-white/80 z-10 flex items-center justify-center rounded-lg">
+                        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-brand-red"></div>
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700 font-bold mb-2">Họ và tên *</label>
+                        <input type="text" name="name" required placeholder="Nhập họ tên của bạn" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brand-red focus:ring-2 focus:ring-brand-red outline-none transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-bold mb-2">Số điện thoại *</label>
+                        <input type="tel" name="phone" required pattern="[0-9]{9,11}" placeholder="Nhập số điện thoại (Zalo)" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brand-red focus:ring-2 focus:ring-brand-red outline-none transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-bold mb-2">Email</label>
+                        <input type="email" name="email" placeholder="Nhập địa chỉ email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brand-red focus:ring-2 focus:ring-brand-red outline-none transition-all">
+                    </div>
+                    <button type="submit" class="w-full bg-brand-yellow text-brand-dark font-black text-xl md:text-2xl py-5 rounded-xl shadow-[0_10px_20px_rgba(255,215,0,0.4)] hover:bg-yellow-400 hover:shadow-[0_15px_30px_rgba(255,215,0,0.6)] transition-all transform hover:-translate-y-1 uppercase animate-pulse-fast mt-4">
+                        <i class="fas fa-hand-pointer mr-2"></i> CƯỚP LẤY VÉ MIỄN PHÍ NGAY!
+                    </button>
+                    
+                    <div id="successMessage" class="hidden bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mt-4 text-center">
+                        <strong class="font-bold">Đăng ký thành công!</strong>
+                        <span class="block sm:inline"> Chúng tôi sẽ liên hệ với bạn sớm nhất.</span>
+                    </div>
+                    <div id="errorMessage" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-4 text-center">
+                        <strong class="font-bold">Có lỗi xảy ra!</strong>
+                        <span class="block sm:inline"> Vui lòng thử lại sau hoặc liên hệ Hotline.</span>
+                    </div>
+                </form>
+                <p class="mt-3 text-sm text-gray-500 font-bold text-center"><i class="fas fa-lock text-green-600"></i> Thông tin được bảo mật 100%</p>
+            </div>
+
+            <!-- Lời Cam Kết -->
+            <div class="border-t-2 border-dashed border-gray-300 pt-8 mt-8">
+                <h4 class="text-center font-black text-xl mb-6 uppercase"><i class="fas fa-shield-alt text-brand-red mr-2"></i> LỜI CAM KẾT THÉP ĐẬP NÁT MỌI SỢ HÃI</h4>
+                <ul class="grid md:grid-cols-2 gap-4 text-sm font-semibold text-gray-700">
+                    <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i> KHÔNG cần biết lập trình, kỹ thuật.</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i> 100% THỰC HÀNH thực chiến máu lửa.</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i> Cầm tay chỉ việc, Support Zalo tận răng.</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i> Hành động quyết liệt = Kết quả bùng nổ.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHẦN 12: CẢNH BÁO TỬ THẦN (FOOTER) -->
+    <footer class="bg-black text-gray-400 py-12 px-4 border-t border-gray-800 pb-28 md:pb-12">
+        <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-brand-red font-black text-2xl uppercase mb-4 tracking-widest text-shadow">
+                <i class="fas fa-skull-crossbones mr-2"></i> CẢNH BÁO TỬ THẦN
+            </h3>
+            <p class="mb-8 text-gray-300 leading-relaxed max-w-2xl mx-auto">
+                Nếu bạn hèn nhát đóng trang web này lại, bạn đang tự tay đào mồ chôn sống sự nghiệp của chính mình. Nếu bạn quay lưng với AI, bạn sẽ bị những người dùng AI tàn nhẫn ĐÈ BẸP KHÔNG THƯƠNG TIẾC. Sự sống còn là do bạn chọn!
+            </p>
+            
+            <div class="bg-gray-900 border border-gray-700 p-6 rounded text-left inline-block max-w-2xl mx-auto shadow-inner">
+                <p class="text-white font-bold mb-2">P/S: Khắc cốt ghi tâm!</p>
+                <p class="text-sm">
+                    Chỉ có <strong>20 VÉ MIỄN PHÍ</strong> duy nhất ngày hôm nay. Thời gian đang cạn kiệt về số 0. Bấm đăng ký điên cuồng ngay trước khi cánh cửa đóng sập! Gọi ngay Hotline nếu muốn sống sót giành suất!
+                </p>
+            </div>
+
+            <div class="mt-10 pt-6 border-t border-gray-800 flex flex-col items-center justify-center">
+                <p class="text-2xl font-black text-white mb-2"><i class="fas fa-phone-alt text-brand-red animate-bounce mr-2"></i> HOTLINE: <span class="text-brand-yellow">0989.493.588</span></p>
+                <p class="text-xs mt-4">Copyright © 2024 AI PLUS - Nguyễn Tất Kiểm. All rights reserved.</p>
+                <p class="text-xs mt-2 max-w-3xl mx-auto opacity-50">Tuyên bố miễn trừ trách nhiệm: Kết quả phụ thuộc vào nỗ lực và khả năng áp dụng thực tế của mỗi cá nhân. Chúng tôi cung cấp công cụ và tư duy, bạn là người hành động để tạo ra kết quả.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Countdown -->
+    <script>
+        // Set a fake countdown for 15 minutes from load
+        const countdownMinutes = 15;
+        let timeInSeconds = countdownMinutes * 60;
+
+        const updateCountdown = () => {
+            const m = Math.floor(timeInSeconds / 60);
+            const s = timeInSeconds % 60;
+
+            document.getElementById('minutes').innerText = m < 10 ? '0' + m : m;
+            document.getElementById('seconds').innerText = s < 10 ? '0' + s : s;
+
+            if (timeInSeconds > 0) {
+                timeInSeconds--;
+            } else {
+                // Reset for the "fake" urgency effect often used in these pages
+                timeInSeconds = countdownMinutes * 60; 
+            }
+        };
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Xử lý Form Gửi về Google Sheets
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwSG9ag8ulXVw4aU-bwzjeITmrEVLhsNvy_ifCFh_3emcrIuRVNGqwyBhOltcDt4GtDeg/exec';
+
+const form = document.getElementById('registerForm');
+const loadingOverlay = document.getElementById('loadingOverlay');
+const successMessage = document.getElementById('successMessage');
+const errorMessage = document.getElementById('errorMessage');
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    
+    // Hiện loading, ẩn thông báo cũ
+    loadingOverlay.classList.remove('hidden');
+    successMessage.classList.add('hidden');
+    errorMessage.classList.add('hidden');
+
+    fetch(scriptURL, { 
+        method: 'POST', 
+        mode: 'no-cors',
+        body: new FormData(form)
+    })
+    .then(response => {
+        loadingOverlay.classList.add('hidden');
+        successMessage.classList.remove('hidden');
+        form.reset();
+        
+        // Tự ẩn thông báo thành công sau 5 giây
+        setTimeout(() => {
+            successMessage.classList.add('hidden');
+        }, 5000);
+    })
+    .catch(error => {
+        loadingOverlay.classList.add('hidden');
+        errorMessage.classList.remove('hidden');
+        console.error('Error!', error.message);
+    });
+});
+    </script>
+</body>
+</html>
